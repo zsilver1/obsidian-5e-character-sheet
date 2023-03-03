@@ -73,8 +73,8 @@ class Stats {
   swimSpeed?: number;
   flySpeed?: number;
   climbSpeed?: number;
-  spellAttack?: number;
-  spellSaveDC?: number;
+  spellAttackBonus?: number;
+  spellSaveDCBonus?: number;
 
   // Now for more freeform fields
   resistances?: string[] = [];

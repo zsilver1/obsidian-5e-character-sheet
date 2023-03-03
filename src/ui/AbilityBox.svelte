@@ -9,7 +9,7 @@
   $: abilityBonus = abilityScoreToBonus(abilityScore);
 </script>
 
-<div class="ability-box">
+<div class="box">
   <div class="type">
     {ability.type}
   </div>
@@ -28,9 +28,8 @@
   .type {
     text-transform: capitalize;
   }
-  .ability-box {
-    border-radius: 30px;
+  .box {
     border-style: solid;
-    padding: 1em;
+    padding: 0.5em;
   }
 </style>

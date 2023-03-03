@@ -8,18 +8,36 @@
 
 <div class="box">
   {#each skills as skill}
-    <div class="skill">{splitCamelCase(skill.type)}</div>
-    <DiceButton
-      formula={"d20+" + skill.value}
-      display={skill.value >= 0 ? `+${skill.value}` : skill.value}
-    />
+    <div class="skill">
+      <div class="skill-name">{splitCamelCase(skill.type)}</div>
+
+      <div class="skill-value">
+        <DiceButton
+          formula={"d20+" + skill.value}
+          display={skill.value >= 0 ? `+${skill.value}` : skill.value}
+        />
+      </div>
+    </div>
   {/each}
 </div>
 
 <style>
   .box {
-    border-radius: 30px;
     border-style: solid;
-    padding: 1em;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+  }
+  .skill {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* .skill-name {
+    align-self: flex-start;
+  } */
+  .skill-value {
+    align-self: flex-end;
   }
 </style>
