@@ -1,14 +1,11 @@
 <script lang="ts">
-  import DiceButton from "./DiceButton.svelte";
+  import { CharacterData } from "../model/character";
+  import Character from "./Character.svelte";
+  import DiceLog from "./DiceLog.svelte";
 </script>
 
-<main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-      <img src="/vite.svg" class="logo" alt="Vite Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
-
-  <DiceButton formula="1d5" />
-</main>
+<div>
+  <DiceLog />
+  <hr />
+  <Character character={new CharacterData("Nea Harjo", "Ranger 2, Rogue 1")} />
+</div>

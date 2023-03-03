@@ -1,11 +1,11 @@
 <script lang="ts">
-  export let label: any;
   export let content: any;
 </script>
 
 <div class="box">
-  <div class="label">{label}</div>
-  <div class="content">{content}</div>
+  <div contenteditable="true" class="content" bind:textContent={content}>
+    {content}
+  </div>
 </div>
 
 <style>

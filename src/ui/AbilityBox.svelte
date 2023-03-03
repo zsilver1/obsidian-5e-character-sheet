@@ -1,22 +1,27 @@
 <script lang="ts">
-  import { AbilityType } from "../model/character";
+  import type { Ability } from "../model/character";
   import { abilityScoreToBonus } from "../model/utils";
+  import DiceButton from "./DiceButton.svelte";
+  import EditableBox from "./EditableBox.svelte";
 
-  export let abilityScore: number = 20;
-  export let abilityType: AbilityType = AbilityType.Strength;
+  export let ability: Ability;
+  let abilityScore = ability.value;
   $: abilityBonus = abilityScoreToBonus(abilityScore);
 </script>
 
 <div class="ability-box">
   <div class="type">
-    {abilityType}
+    {ability.type}
   </div>
+
+  <DiceButton
+    formula={"d20+" + abilityBonus}
+    display={abilityBonus >= 0 ? `+${abilityBonus}` : abilityBonus}
+  />
 
   <div class="score">
-    {abilityScore}
+    <EditableBox bind:content={abilityScore} />
   </div>
-
-  <div class="bonus">{abilityBonus}</div>
 </div>
 
 <style>

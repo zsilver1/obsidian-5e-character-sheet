@@ -21,6 +21,7 @@
     "vite": "^4.1.0"
   },
   "dependencies": {
+    "@dice-roller/rpg-dice-roller": "^5.2.1",
     "rpg-dice-roller": "^5.0.0"
   }
 }
