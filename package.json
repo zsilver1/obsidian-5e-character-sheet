@@ -1,0 +1,26 @@
+{
+  "name": "obsidian-5e-character-sheet",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "version": "node version-bump.mjs && git add manifest.json versions.json"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.0.2",
+    "@tsconfig/svelte": "^3.0.0",
+    "obsidian": "^1.1.1",
+    "svelte": "^3.55.1",
+    "svelte-check": "^2.10.3",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  },
+  "dependencies": {
+    "rpg-dice-roller": "^5.0.0"
+  }
+}
