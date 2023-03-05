@@ -6,6 +6,7 @@
   export let skills: Skill[];
 </script>
 
+<h3>Skills</h3>
 <div class="box">
   {#each skills as skill}
     <div class="skill">

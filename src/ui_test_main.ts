@@ -1,7 +1,8 @@
-import App from "./ui/App.svelte";
+import { CharacterData } from "./model/character";
+import CharacterStats from "./ui/CharacterStats.svelte";
 
-const app = new App({
-  target: document.body,
+const app = new CharacterStats({
+  target: document.body, props: { character: new CharacterData("Nea", "Ranger") }
 });
 
 export default app;
